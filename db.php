@@ -1,24 +1,43 @@
 <?php
-// $conn = mysqli_connect(
-//   'localhost', // 주소
-//   'test',
-//   '1234567890',
-//   'SEMIN'); // 데이터베이스 이름
 
-// $sql = "SELECT * FROM terran limit 10";
+  error_reporting(E_ALL);
+  ini_set('display_errors', '1');
+
+$conn = mysqli_connect(
+  'db.goselpic.com', 
+  'semin',
+  'semin1234567890',
+  'semin'); 
+
+$sql = "SELECT * FROM terran limit 10";
+$result = mysqli_query($conn, $sql);
+
+// echo "<table border='1'>";
+
+// while($row = mysqli_fetch_array($result)) {
+//   echo "<tr>";
+//   echo '<td>'.$row['name'].'</td>';
+//   echo '<td>'.$row['age'].'</td>';
+//   echo '<td>'.$row['sex'].'</td>';
+//   echo "</tr>";
+// }
+
+
+// echo "</table>";
+
+// $sql = "SELECT * FROM terran limit 1";
 // $result = mysqli_query($conn, $sql);
 
+// echo "<table border='1'>";
 
-// print_r($result);
+// while($row = mysqli_fetch_array($result)) {
 
-
-// Create connection
-$con=mysqli_connect("localhost","test","1234567890","my_db");
-
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+  
+//   echo "<tr>";
+//   echo '<td>'.$row['name'].'</td>';
+//   echo '<td>'.$row['age'].'</td>';
+//   echo '<td>'.$row['sex'].'</td>';
+//   echo "</tr>";
+// }
 
 ?>
