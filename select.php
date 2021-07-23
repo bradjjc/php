@@ -5,18 +5,18 @@ include "db.php";
 
 echo "</table>";
 
-$sql = "
-  SELECT 
+$sql = "SELECT 
       terran.* ,
       (select COUNT(*) from matching where parent_id = terran._id) as cnt
   FROM 
     terran as terran 
     order by terran._id DESC
   limit 20";
+
 $result = mysqli_query($conn, $sql);
 
 
-$sql2 = "SELECT COUNT(*) as cnt from terran ";
+$sql2 = "SELECT COUNT(*) as cnt from terran";
 
 $result2 = mysqli_query($conn, $sql2);
 
